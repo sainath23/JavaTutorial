@@ -1,0 +1,1404 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#"
+     xml:base="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#affectedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#affectedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#affectsPart"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Affected_part"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Insect_pest"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#affectsPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#affectsPart">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Insect_pest"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Affected_part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#causes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#causes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isCausedBy"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#causes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacteria"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#causes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungus"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#causes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Nematode"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#causes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Virus"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#causes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#hasSymptom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#hasSymptom">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isSymptomOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Insect_pest"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Weed"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isCausedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isCausedBy">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isCausedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isCausedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacteria"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isCausedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungus"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isCausedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Nematode"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isCausedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Virus"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isSymptomOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isSymptomOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Insect_pest"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Weed"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#hasDataSymptom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#hasDataSymptom">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Weed"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#hasScientificName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#hasScientificName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacteria"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungus"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Insect_pest"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Nematode"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Virus"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isControlledBy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isControlledBy">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Weed"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isPreventedBy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#isPreventedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Insect_pest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Affected_part -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Affected_part"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacteria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacteria"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Insect_pest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungal_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungal_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Insect_pest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Insect_pest"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Nematodal_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Nematodal_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Nematode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Nematode"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Viral_disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Viral_disease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Virus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Virus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Weed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Weed"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_gossypii -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_gossypii">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungus"/>
+        <causes rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_leaf_spot"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alternaria gossypii</hasScientificName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_leaf_spot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_leaf_spot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungal_disease"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Brown_circular_lesions_redish_borders"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Concentric_rings_on_bolls"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Extensive_defoliation"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_gossypii"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concentric rings on bolls. Extensive defoliation. Brown circular lesions redish borders.</hasDataSymptom>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seed treatment with thiram+carbendazium (2:1) @ 3g/kg seed. Use Mancozeb or copper fungicide at 2.5g/l or carbendazim 1g/lit.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Aspergillus_niger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Aspergillus_niger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungus"/>
+        <causes rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll_rot"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aspergillus niger</hasScientificName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_blight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_blight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_disease"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Brown_to_black_color_lesions"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Drooping_of_bolls"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Small_and_round_spots_on_bolls"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Small_sized_fruits"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Spots_on_cotyledons_and_seedlings"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Water_soaked_spots"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Xanthomonas_compestris_pv_malvaceirum"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown to black color lesions. Spots on cotyledons and seedlings. Drooping of bolls. Water soaked spots. Small sized fruits. Small and round spots on bolls.</hasDataSymptom>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delint the cotton seeds with concentrated sulphuric acid at 100ml/kg of seed. Treat the delinted seeds with carboxin or oxycarboxin at 2 g/kg or soak the seeds in 1000 ppm Streptomycin sulphate overnight. Remove and destory the infected plant debris. Rogue out the volunteer cotton plants and weed hosts. Follow crop rotation with non-host crops. Early thinning and early earthing up with potash. Grow resistant varieties like Sujatha, 1412 and CRH 71. Spray with Streptomycin sulphate +Ttetracycline mixture 100g along with Copper oxychloride at 1.25 Kg/ha.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Barnyard_grass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Barnyard_grass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Weed"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Compete_with_main_crop"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compete with main crop</hasDataSymptom>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Echinochloa</hasScientificName>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apply cyhalofop-butyl 10% EC @ 0.75-0.80 l/ha @ 18-20 days after sowing in grassy weeds in direct seeded rice followed by one hand weeding given after 4-6 weeks.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bear_leaf-like_enations -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bear_leaf-like_enations">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaf_curl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Black_and_brittled_woody_part -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Black_and_brittled_woody_part">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Black_sooty_appearance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Black_sooty_appearance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Affected_part"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_leaf_spot"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_blight"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll_rot"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bollworm"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_wilt"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pink_bollworm"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Spotted_bollworm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll_rot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll_rot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungal_disease"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Black_sooty_appearance"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Inferior_fiber_quality"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pinkish_rot_on_the_base_of_boll"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_cotton_yield"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Aspergillus_niger"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black sooty appearance. Reduced cotton yield. Inferior fiber quality. Pinkish rot on the base of boll.</hasDataSymptom>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adopt optimum spacing. Apply the recommended doses of fertilizers. Spray Copper oxychloride 2.5kg along with an insecticide for bollworm from 45th day at 15 days interval. Two or three sprays are necessary.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boremark_in_main_shoot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boremark_in_main_shoot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Spotted_bollworm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Brown_circular_lesions_redish_borders -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Brown_circular_lesions_redish_borders">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_leaf_spot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Brown_to_black_color_lesions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Brown_to_black_color_lesions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_blight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Brownish_discoloration_of_roots -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Brownish_discoloration_of_roots">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Chlorosis_of_plants -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Chlorosis_of_plants">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Climbing_ivy_appearance_during_early_stage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Climbing_ivy_appearance_during_early_stage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Common_purselane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Common_purselane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Weed"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Compete_with_main_crop"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compete with main crop</hasDataSymptom>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PortulacaOleracea</hasScientificName>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Application of fluchloralin 45% EC @ 2.0-2.68 l/ha as pre-planting application.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Compete_with_main_crop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Compete_with_main_crop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Barnyard_grass"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Common_purselane"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Doob_grass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Concentric_rings_on_bolls -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Concentric_rings_on_bolls">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_leaf_spot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bollworm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bollworm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Insect_pest"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Excessive_shedding_of_buds_and_bolls"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Feeding_of_internal_contents_of_bolls"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Round_hole_near_the_base"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#larval_frass_and_flaring_of_bracts"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Earias vitella</hasScientificName>
+        <isPreventedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cotton Bollworm Pesticides Details: Egg Stage - Removal of terminals to be done at times of high oviposition. Set up bird perches. Larva Stage - Apply flubendiamide 39.35% M/M SC @ 100-125 ml/ha. Pupa Stage - Hand picking and destruction of various insect stages. Adult - Set up pheromone traps @ 5 traps/ha for monitoring. Set up bird perches.</isPreventedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Viral_disease"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Climbing_ivy_appearance_during_early_stage"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Hairy_and_dark_brown_roots"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leathery_and_glossy_leaves"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_internode_length_and_boll_size"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_plant_height"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Small_knots_on_secondary_root"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top_virus"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reduced internode length and boll size. Small knot on secondary root. Leathery and glassy leaves. Climbing ivy appearance during early stage. Hairy and dark brown roots. Reduced plant height.</hasDataSymptom>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seed treatment with imidacloprid 60 FS @ 10 ml/kg seed keeps the crop free from sucking pest for over a month. OR Seed treatment with thiamethoxam 70 WS @ 5 g/kg seed. Spray NSKE 5% @ 2.0 ml/l OR clothianidin 50 WDG @ 0.075 g/l OR imidacloprid 17.8 SL @ 0.25 ml /l OR acetamiprid 20 WP @ 0.2 g/l OR thiamethoxam 25 WP @ 0.2 g/l.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top_virus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top_virus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Virus"/>
+        <causes rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cotton bunchy top virus</hasScientificName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_rust -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_rust">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungal_disease"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Dark_brown_color_leaves"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Defoliation_of_plants"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Yellowish_brown_rust_pycnial_on_leaves"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Puccinia_stakmanii"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark brown color leaves. Yellowish brown rust pycnial on leaves. Defoliation of plants.</hasDataSymptom>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dithane Z 78 @ 800-1200g/ha with contact &amp; systemic mode of action. Field sanitation as other remedies.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Curling_upward_of_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Curling_upward_of_leaves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaf_curl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Dark_brown_color_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Dark_brown_color_leaves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_rust"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Defoliation_of_plants -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Defoliation_of_plants">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_rust"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Doob_grass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Doob_grass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Weed"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Compete_with_main_crop"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compete with main crop</hasDataSymptom>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CynodonDactylon</hasScientificName>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Application of fluchloralin 45% EC @ 2.0-2.68 l/haas pre-planting application.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Dried_and_withered_shoot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Dried_and_withered_shoot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Spotted_bollworm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Drooping_of_bolls -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Drooping_of_bolls">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_blight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Drooping_of_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Drooping_of_leaves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_wilt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Dwarfing_and_permature_decay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Dwarfing_and_permature_decay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Excessive_shedding_of_buds_and_bolls -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Excessive_shedding_of_buds_and_bolls">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bollworm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Extensive_defoliation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Extensive_defoliation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_leaf_spot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Feeding_holes_in_flower_buds -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Feeding_holes_in_flower_buds">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Spotted_bollworm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Feeding_of_internal_contents_of_bolls -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Feeding_of_internal_contents_of_bolls">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bollworm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Formation_of_brown_rings_on_petiole -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Formation_of_brown_rings_on_petiole">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_wilt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_oxysporum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_oxysporum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungus"/>
+        <causes rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_wilt"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fusarium oxysporum</hasScientificName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_wilt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_wilt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungal_disease"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Drooping_of_leaves"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Formation_of_brown_rings_on_petiole"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Smaller_leaves_and_bolls"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stunting_and_wilting_of_plant"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Yellowing_of_leaves"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_oxysporum"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smaller leaves and bolls. Stunting and wilting of plant. Droopling of leaves. Yellowing of leaves. Formation of brown rings on petiole.</hasDataSymptom>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On the first appearance of field symptoms, the crop should be sprayed with a mixture of strptocyclin. This should be repeated at 10-15 days intervals to check the secondary spread.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Gemini_virus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Gemini_virus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Virus"/>
+        <causes rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaf_curl"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geminiviridae</hasScientificName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Hairy_and_dark_brown_roots -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Hairy_and_dark_brown_roots">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Inferior_fiber_quality -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Inferior_fiber_quality">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaf_curl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaf_curl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Viral_disease"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bear_leaf-like_enations"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Curling_upward_of_leaves"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_crop_yield"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stunted_plants"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Vein_thickening"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Gemini_virus"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Management of planting date to avoid peak vector population. Elimination of volunteer perennial cotton and alternate hosts including malvaceous hosts like wild okra. Use of fungus Paecilomyces farinosus which parasitizes B.tabaci. It brings down vector population. Foliar application of neem leaf extract and 1% neem oil resulted in 80% reduction of virus transmission. Vector management by application of granular systemic insecticides.</hasDataSymptom>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apply Bifenthrin 10% EC @ 800 ml/ha or Fenpropathrin 30% EC @ 250-340 ml/ha or Thiacloprid 21.7% SC @ 500-600 ml/ha or Triazophos 40% EC @ 1500-2000 ml/ha to manage whitefly.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leathery_and_glossy_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leathery_and_glossy_leaves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Affected_part"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_leaf_spot"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_blight"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bollworm"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_rust"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_wilt"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaf_curl"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pink_bollworm"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Spotted_bollworm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves_droping_with_no_discoloration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves_droping_with_no_discoloration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Loss_of_plant_mortality -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Loss_of_plant_mortality">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Loss_of_secondary_roots -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Loss_of_secondary_roots">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Meloidogyne_incognita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Meloidogyne_incognita">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Nematode"/>
+        <causes rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root-knot_nematode"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meloidogyne incognita</hasScientificName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Patches_and_spots_on_crop_field -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Patches_and_spots_on_crop_field">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root-knot_nematode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pink_bollworm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pink_bollworm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Insect_pest"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pink_larvae_inside_developing_bolls_with_interloculi_movement"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rosetted_bloom"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pectinophora gossypiella</hasScientificName>
+        <isPreventedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pink Bollworm Pesticides Details: Egg Stage - Hand picking and destruction of various insect stages. Set up bird perches. Larva Stage - Apply carbaryl 85% W.P. @ 1411 g/ha. Pupa Stage - Hand picking and destruction of various insect stages. Set up bird perches. Adult - Set up pheromone traps @ 5 traps/ha for monitoring. Set up bird perches.</isPreventedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pink_larvae_inside_developing_bolls_with_interloculi_movement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pink_larvae_inside_developing_bolls_with_interloculi_movement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pink_bollworm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pinkish_rot_on_the_base_of_boll -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pinkish_rot_on_the_base_of_boll">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Plants_appear_in_patches -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Plants_appear_in_patches">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Produces_galls_on_tap_and_lateral_roots -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Produces_galls_on_tap_and_lateral_roots">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root-knot_nematode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Puccinia_stakmanii -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Puccinia_stakmanii">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungus"/>
+        <causes rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_rust"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Puccinia stakmanii</hasScientificName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_cotton_yield -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_cotton_yield">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_crop_yield -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_crop_yield">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaf_curl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_internode_length_and_boll_size -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_internode_length_and_boll_size">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_plant_height -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_plant_height">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_plant_size -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_plant_size">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root-knot_nematode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Nematodal_disease"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stem"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Brownish_discoloration_of_roots"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Chlorosis_of_plants"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Dwarfing_and_permature_decay"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Loss_of_plant_mortality"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Loss_of_secondary_roots"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Smaller_and_lesser_bolls"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Thin_and_dried_roots_with_brown_lesion"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rotylenchulus_reniformis"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chlorosis of plants. Brownish discoloration of roots. Loss of plant mortality. Thin and dried roots with brown lesion. Loss of secondary roots. Dwarfing and permature decay. Smaller and lesser bolls.</hasDataSymptom>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apply oxamyl and Carbofuran.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rhizoctonia_bataticola -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rhizoctonia_bataticola">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungus"/>
+        <causes rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rhizoctonia bataticola</hasScientificName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Affected_part"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root-knot_nematode"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root-knot_nematode -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root-knot_nematode">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Nematodal_disease"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stem"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Patches_and_spots_on_crop_field"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Produces_galls_on_tap_and_lateral_roots"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reduced_plant_size"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stunting_of_plants"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Meloidogyne_incognita"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patches and spots on crop field. Stunting of plants. Reduced plant size. Produces galls on tap and lateral roots.</hasDataSymptom>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apply fensulfothion and Carboxin.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungal_disease"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stem"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Black_and_brittled_woody_part"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves_droping_with_no_discoloration"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Plants_appear_in_patches"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rottened_roots"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Shredding_of_bark"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Sudden_death_by_wilting"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Yellowing_of_wooden_tissues"/>
+        <isCausedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rhizoctonia_bataticola"/>
+        <hasDataSymptom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yellowing of wooden tissues. Leaves drooping with no discoloration. Shredding of bark. Black and brittled woody part. Sudden death by wilting. Plants appear in patches. Rottened roots.</hasDataSymptom>
+        <isControlledBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treat the seeds with Trichoderma viride@ 4g/kg of seed. Spot drench with 0.1% Carbendazim. Apply farm yard manure at 10t/ha or neem cake at 150 Kg/ha. Adjust the sowing time, early sowing (First Week of April) or late sowing (Last week of June) so that crop escapes the high soil temperature conditions. Adopt intercropping with sorghum or moth bean (Phaseolus aconitifolius)to lower the soil temperature.</isControlledBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rosetted_bloom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rosetted_bloom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pink_bollworm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rottened_roots -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rottened_roots">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rotylenchulus_reniformis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rotylenchulus_reniformis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Nematode"/>
+        <causes rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rotylenchulus reniformis</hasScientificName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Round_hole_near_the_base -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Round_hole_near_the_base">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bollworm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Shredding_of_bark -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Shredding_of_bark">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Small_and_round_spots_on_bolls -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Small_and_round_spots_on_bolls">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_blight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Small_knots_on_secondary_root -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Small_knots_on_secondary_root">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Small_sized_fruits -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Small_sized_fruits">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_blight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Smaller_and_lesser_bolls -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Smaller_and_lesser_bolls">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Smaller_leaves_and_bolls -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Smaller_leaves_and_bolls">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_wilt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Spots_on_cotyledons_and_seedlings -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Spots_on_cotyledons_and_seedlings">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_blight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Spotted_bollworm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Spotted_bollworm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Insect_pest"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll"/>
+        <affectsPart rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaves"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boremark_in_main_shoot"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Dried_and_withered_shoot"/>
+        <hasSymptom rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Feeding_holes_in_flower_buds"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helicoverpa armigera</hasScientificName>
+        <isPreventedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spotted Bollworm Pesticides Details: Egg Stage - Hand picking and destruction of various insect stages. Set up bird perches. Larva Stage - Apply carbaryl 85% W.P. @ 1411 g/ha. Pupa Stage - Hand picking and destruction of various insect stages. Set up bird perches. Adult - Set up pheromone traps @ 5 traps/ha for monitoring. Set up bird perches.</isPreventedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Affected_part"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root-knot_nematode"/>
+        <affectedBy rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stunted_plants -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stunted_plants">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaf_curl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stunting_and_wilting_of_plant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stunting_and_wilting_of_plant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_wilt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stunting_of_plants -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Stunting_of_plants">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root-knot_nematode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Sudden_death_by_wilting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Sudden_death_by_wilting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Thin_and_dried_roots_with_brown_lesion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Thin_and_dried_roots_with_brown_lesion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Tobacco_streak_virus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Tobacco_streak_virus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Virus"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bromoviridae Ilarvirus</hasScientificName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Vein_thickening -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Vein_thickening">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Leaf_curl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Water_soaked_spots -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Water_soaked_spots">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_blight"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Xanthomonas_compestris_pv_malvaceirum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Xanthomonas_compestris_pv_malvaceirum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacteria"/>
+        <causes rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_blight"/>
+        <hasScientificName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xanthomonas compestris pv malvaceirum</hasScientificName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Yellowing_of_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Yellowing_of_leaves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_wilt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Yellowing_of_wooden_tissues -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Yellowing_of_wooden_tissues">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Yellowish_brown_rust_pycnial_on_leaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Yellowish_brown_rust_pycnial_on_leaves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_rust"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#larval_frass_and_flaring_of_bracts -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#larval_frass_and_flaring_of_bracts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Symptoms"/>
+        <isSymptomOf rdf:resource="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bollworm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Bacterial_disease"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fungal_disease"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Nematodal_disease"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Viral_disease"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Weed"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_gossypii"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Aspergillus_niger"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_oxysporum"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Puccinia_stakmanii"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rhizoctonia_bataticola"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Alternaria_leaf_spot"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Boll_rot"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_rust"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Fusarium_wilt"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root_rot"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Barnyard_grass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Common_purselane"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Doob_grass"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bollworm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Pink_bollworm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Spotted_bollworm"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Cotton_bunchy_top_virus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Gemini_virus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Tobacco_streak_virus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Xanthomonas_compestris_pv_malvaceirum"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Meloidogyne_incognita"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Rotylenchulus_reniformis"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Reniform_nematode"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sainath/ontologies/2016/11/CottonOntology#Root-knot_nematode"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
